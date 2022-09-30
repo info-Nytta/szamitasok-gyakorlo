@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang='hu' id='top'>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<link rel="stylesheet" href="css/matek.css" />
+	<script src='js/functions.js'></script>
+</head>
+<body>
+<div class='full'>
+	<header>
+		<div id='head'>
+			<a href=''><img src='img/i_love_maths.png'></a>
+			<h1>Számítások</h1>
+		</div>
+		<nav>
+			<ul>
+				<li><a href='#haromszog'>Háromszög</a></li>
+				<li><a href='#sorozat'>Számtani sorozat</a></li>
+				<li><a href='#szorzo'>Szorzótábla</a></li>
+				<li><a href='#homerseklet'>Hőmérséklet átváltás</a></li>
+				<li><a href='#kalkulator'>Kölcsön kalkulátor</a></li>
+			</ul>
+		</nav>
+	</header>
+	<section id='matematika'>
+		<h2>Matematika</h2>
+		<p>
+			A matematikát nehéz pontosan meghatározni, mibenlétének kérdése még manapság is, sőt manapság különösen, vita tárgya, élő és nem lezárt tudományos probléma, mellyel a matematikafilozófia (a filozófia egyik területe, sőt már-már önálló tudományága) foglalkozik. 
+		</p><p>	
+			Amíg a matematikába sorolt tevékenységekről, módszerekről és fogalmakról (vagyis mi az, ami a matematika körébe tartozik, és mi az, ami nem) ha nem is teljes, de nagy fokú és vitákat alig-alig kiváltó egyetértés alakult ki, addig a matematika által tanulmányozott fogalmak lételméleti helyzetéről, ismeretelméleti megközelítéséről, magának a matematikának mint tevékenységnek a jellegéről, sőt céljáról („keményvonalas” természet- vagy pedig „szoft” társadalomtudomány, esetleg művészet; empirikus vagy inkább normatív, stb.) a legkülönfélébb releváns elképzelések léteznek egymással párhuzamosan.
+		</p>
+		<p>
+			Forrás: <a href='https://hu.wikipedia.org/wiki/Matematika' target='_blank'>Wikipédia</a>
+		</p>
+	</section>
+	<hr>
+	<section id='haromszog'>
+		<h2>Háromszög kerülete</h2>
+		<p>
+			Add meg a háromszög oldalait!
+		</p>
+		<img src='img/haromszog.jpg'>
+		<div class='form' id='hsz'>
+			<p>a = <input type='number' id='a' min='1'></p>
+			<p>b = <input type='number' id='b' min='1'></p>
+			<p>c = <input type='number' id='c' min='1'></p>
+			<button onClick='kerulet(a.value,b.value,c.value)'>Számolás</button>
+		</div>
+		<div id='kerulet'></div>
+	</section>
+	<hr>
+	<section id='sorozat'>
+		<h2>Számtani sorozat</h2>
+		<img src='img/sorozat.gif'>
+		<div class='form' id='szamtani'>
+			<p>Első elem: a<sub>1</sub>=<input type="number" id="a1"></p>
+			<p>Differenciál: d= <input type="number" id="d"></p>
+			<p>Elemek száma: n= <input type="number" id="n" min="1"></p>
+			<button onClick='sorozat(a1.value,d.value,n.value)'>Generálás</button>
+		</div>
+		<div id='generalt'></div>
+	</section>
+	<hr>
+	<section id='szorzo'>
+		<h2>Szorzótábla</h2>
+		<select id='szorzo' name='szorzo'>
+			<script>
+				for (i=5; i<=10; i++) 
+					document.write(""+
+						"<option onClick='szorzotabla(this.value)'>"+
+						i+
+						"</option>")
+			</script>
+		</select>
+		<div id='szorzotabla'></div>
+		<script>szorzotabla(10)</script>
+	</section>
+	<hr>
+	<section id='homerseklet'>
+		<h2>Hőmérséklet átváltás</h2>
+		<div class='form' id='valt'>
+			<p><input type="text" id="celsius" > °C</p>
+			<button onClick='atvalt(celsius.value);'>Átváltás</button>
+			<p><input type="text" id="k" value="" disabled> Kelvin</p>
+			<p><input type="text" id="f" value="" disabled> Fahrenheit</p>
+		</div>
+	</section>
+	<hr>
+	<section id='kalkulator'>
+		<h2>Kölcsön törlesztő részlet kalkulátor</h2>
+		<div class='form' id='kolcson'>
+			<p>Felvett összeg: <span id='millio'></span></p>
+			<p>1 <input type="range" id='ft' value='1' min="1" max="10" onChange="document.getElementById('millio').innerHTML = this.value +' millió Ft'"> 10</p>
+			<p>Futamidő: <span id='honap'></span></p>
+			<p>12 <input type="range" id='ido' value='12' min="12" max="72" step='12' onChange="document.getElementById('honap').innerHTML = this.value +' hónap'"> 72</p>
+			<button Onclick='torlesztes(ft.value,ido.value)'>Kalkuláció</button>
+		</div>
+		<div id='reszlet'></div>
+	</section>	
+	</main>
+	<footer>
+		<a id='up' href='#top'><img src='img/arrow_up.png'></a>
+		<div id='design'>design and programming by <a href='https://nytta.hu' target='_blank'>Nytta</a> 
+		<script>d=new Date(); document.write(d.getFullYear())</script>
+		</div>
+	</footer>
+	<img style='width:100px;display:block;margin:20px auto' src='img/i_love_js.png'>
+</div>
+</body>
+</html>

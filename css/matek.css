@@ -1,0 +1,165 @@
+* {	
+	box-sizing: border-box;
+	overflow: auto;
+	margin: 0;
+	padding: 0
+}
+body {
+	background-image: url(../img/mt.jpg);
+	background-attachment: fixed;
+	font-family: Georgia;
+	font-size: 1.2em;
+}
+a {
+	text-decoration: none;
+	color: red;
+	font-weight: bold;
+}
+a:hover {
+	color: gray;
+}
+.full {
+	background-color: white;
+	width: 100%;
+	max-width: 1000px;
+	margin: auto;
+	border:5px black solid;
+}
+#head {
+	padding: 25px 10px;
+}
+#head img {
+	max-width:80%;
+	display: block;
+	margin: auto;
+}
+#head h1 {
+	display: none;
+}
+nav {
+	position: sticky;
+	top:0;
+	background-color: red;
+	color: white;
+	padding:0;
+}
+nav ul {
+	list-style: none;
+	text-align: center;
+	margin:0;
+	padding:0;
+}
+nav ul li {
+	margin:0;
+	padding:0;
+	border-bottom: 1px gray solid;
+}
+nav ul li:first-child {
+	border-top: 1px gray solid;
+}
+nav ul li a {
+	display: block;
+	padding:10px 10px;
+	color:white !important;
+}
+	nav ul li a:hover {
+		background-color: gray;
+}
+section {
+	max-width: 400px;
+	padding: 10px;
+	margin:50px auto;
+}
+hr {
+	border:none;
+	border-top: 10px gold dotted;
+}
+h2, p {
+	margin: 15px auto;
+}
+h2 {
+	text-align:center;
+}
+img {
+	display:block;
+	margin:auto;
+	max-width: 100%;
+}
+.form {
+	display:block;
+	width: 100%;
+	max-width:400px;
+	margin:50px auto 30px auto;
+}
+input[type=number] {
+	height: 30px;
+	float:right;
+}
+input[type=text] {
+	height: 30px;
+}
+select {
+	margin-right:0;
+	padding:5px;
+}
+button {
+	padding: 5px;
+	font-size:1em;
+}
+table {
+	margin: auto;
+	text-align:center;
+}
+td {
+	width: 35px;
+	height: 35px;
+	background-color: red;
+	color: white;
+}
+td:hover {
+	background-color: gold;
+	color: black;
+}
+footer {
+	padding:20px;
+	background-color: red;
+	color:white;
+}
+footer a {
+	color:white;
+}
+#up {
+	position: fixed;
+	right: 5px;
+	bottom: 20px;
+	padding: 5px;
+	border-radius: 5px;
+	background-color: white;
+}
+#up img {
+	width: 40px;
+}
+#design {
+	font-size:80%;
+	text-align: center;
+	font-style: italic;
+	font-family: Serif;
+}
+
+@media screen and (min-width:600px) 
+{
+	#head img {
+		width:150px;
+		float:left;
+	}
+	#head h1 {
+		display:block;
+		text-align: right;
+		padding-top: 50px;
+	}
+	nav ul li {
+	display: inline-block;
+	border:none;
+	padding: auto 30px;
+	}
+}
